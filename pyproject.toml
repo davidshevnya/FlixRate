@@ -1,0 +1,9 @@
+[project]
+name = "FlixRate"
+version = "0.1.0"
+description = "Movie rating platform with reviews and recommendations"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "django==5.2.4",
+]
