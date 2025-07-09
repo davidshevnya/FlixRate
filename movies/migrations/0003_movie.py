@@ -4,31 +4,38 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('movies', '0002_genre_slug'),
+        ("movies", "0002_genre_slug"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='Movie',
+            name="Movie",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('movie_id', models.IntegerField()),
-                ('title', models.TextField()),
-                ('slug', models.SlugField(unique=True)),
-                ('is_active', models.BooleanField(default=True)),
-                ('overview', models.TextField()),
-                ('popularity', models.FloatField()),
-                ('poster', models.URLField(blank=True, null=True)),
-                ('video', models.URLField(blank=True, null=True)),
-                ('release_date', models.DateField()),
-                ('language', models.TextField(blank=True, max_length=100, null=True)),
-                ('vote_averate', models.FloatField(blank=True, null=True)),
-                ('genre', models.ManyToManyField(to='movies.genre')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("movie_id", models.IntegerField()),
+                ("title", models.TextField()),
+                ("slug", models.SlugField(unique=True)),
+                ("is_active", models.BooleanField(default=True)),
+                ("overview", models.TextField()),
+                ("popularity", models.FloatField()),
+                ("poster", models.URLField(blank=True, null=True)),
+                ("video", models.URLField(blank=True, null=True)),
+                ("release_date", models.DateField()),
+                ("language", models.TextField(blank=True, max_length=100, null=True)),
+                ("vote_averate", models.FloatField(blank=True, null=True)),
+                ("genre", models.ManyToManyField(to="movies.genre")),
             ],
             options={
-                'ordering': ('-release_date',),
+                "ordering": ("-release_date",),
             },
         ),
     ]
