@@ -3,4 +3,4 @@ from django.http import HttpResponse
 
 
 def home(request):
-    return HttpResponse("FlixRate - rate movies, discover new films")
+    return render(request, "movies/home.html")
