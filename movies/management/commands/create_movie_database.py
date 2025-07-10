@@ -14,7 +14,6 @@ class Command(BaseCommand):
     help = "Create a movie database from https://www.themoviedb.org/ API"
 
     api_read_token = env("API_READ_TOKEN")
-    api_key = env("API_KEY")
 
     headers = {
         "accept": "application/json",
